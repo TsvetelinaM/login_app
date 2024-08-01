@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+Prerequisites - installed Node.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+After cloning the repo locally run the following commands to install the required dependencies :
 
-## Available Scripts
+### `npm install` or `yarn add`
 
-In the project directory, you can run:
+To run the application:
 
-### `npm start`
+### `npm start` or `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Overview:
+A simple login app, that uses mocked data for validating entered user credentials - email and password. It shows an error if the entered info is wrong/missing or redirects the user to the Home page.
+It contains not protected routes -> /login and /reset and protected -> /home.
+On the /reset route a reset password form is shown that works with an existing in our mocked data email. If the email is wrong -> the user will see an error message shown in the right top corner or if it is successful -> a success message will appear.
+The error handling is presented through notistack.
+The app supports localization - two languages - BG and EN (the language dropdown is located in the top right corner).
+The state management is handled using Redux.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Folder Structure:
 
-### `npm test`
+Public:
+└───i18n
+public/i18n -> bg.json
+public/i18n -> en.json
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Src:
+├───assets
+│ └───images
+├───components
+│ ├───buttons
+│ ├───containers
+│ ├───dropdowns
+│ ├───form
+│ ├───headers
+│ └───layout
+├───pages
+│ ├───home
+│ ├───localization
+│ ├───login
+│ ├───main
+│ ├───notFound
+│ └───reset
+└───services
+├───api
+├───i18n
+├───snackbar
+├───utils
+└───validations
 
-### `npm run build`
+In the assets folder are stored all assets needed for the app - like images.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Components - reusable small parts, styled using styled-components library.
+Pages - the whole pages used for the routing. The components needed for them are stored in the Components folder.
+Services:
+api-> the mocked data used for the login functionality ('users.json')
+i18n-> configurations for the localization
+snackbar -> configuration for the used notification system
+utils -> variables used in the application or other common util functions
+validations -> main validations used in the application.
