@@ -5,13 +5,8 @@
         "name":"Test Testov"
     },
     {
-        "email":"",
-        "password":"",
-        "name":""
-    },
-    {
-        "email":"",
-        "password":"",
-        "name":""
+        "email":"user@abv.bg",
+        "password":"changePassword",
+        "name":"Common User"
     }
 ]

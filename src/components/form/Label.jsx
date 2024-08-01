@@ -9,3 +9,9 @@ export const Label = styled.label`
   text-transform: capitalize;
   display: block;
 `
+
+export const ErrorMsg = styled(Label)`
+  color: red;
+  text-transform: none;
+  padding: 1.2rem 0 0 0;
+`

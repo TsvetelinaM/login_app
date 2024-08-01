@@ -6,7 +6,7 @@ import LoginPage from 'pages/login/LoginPage'
 import ResetPasswordPage from 'pages/reset/ResetPasswordPage'
 import HomePage from 'pages/home/HomePage'
 import NotFoundPage from 'pages/notFound/NotFoundPage'
-import * as constants from 'services/utils/AppVars'
+import * as constants from 'services/utils/appVars'
 
 const AppRoutes = (props) => (
   <Routes>

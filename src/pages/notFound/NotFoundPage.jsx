@@ -5,7 +5,7 @@ import { MainContainer } from 'components/containers/MainContainer'
 import { BackBtn } from 'components/buttons/Buttons'
 import { Header1 } from 'components/headers/Headers'
 import { Centered } from 'components/layout/Layout'
-import { loginPath } from 'services/utils/AppVars'
+import { loginPath } from 'services/utils/appVars'
 
 const NotFoundPage = ({ translations }) => {
   return (

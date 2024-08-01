@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { Outlet, Navigate } from 'react-router-dom'
 
 import { getIsAuthenticated } from 'pages/login/selectors'
-import * as constants from 'services/utils/AppVars'
+import * as constants from 'services/utils/appVars'
 
 const GuardedRoute = ({ isAuthenticated }) => {
   return isAuthenticated ? <Outlet /> : <Navigate to={constants.loginPath} />

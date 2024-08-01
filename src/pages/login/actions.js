@@ -6,7 +6,7 @@ export const loginRequest = (credentials) => (dispatch) => {
     (user) =>
       user.email === credentials.email && user.password === credentials.password
   )
-  if (user) {
+  if (user.email) {
     dispatch({
       type: LOGIN_SUCCESS,
       user: user,

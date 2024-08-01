@@ -11,7 +11,7 @@ import { SubmitBtn } from 'components/buttons/Buttons'
 import { Centered } from 'components/layout/Layout'
 import { loginRequest } from 'pages/login/actions'
 import { getIsAuthenticated } from 'pages/login/selectors'
-import { homePath, resetPath } from 'services/utils/AppVars'
+import { homePath, resetPath } from 'services/utils/appVars'
 import { emailKey, passwordKey } from './constants'
 
 const LoginPage = ({ translations, loginRequest, isAuthenticated }) => {
