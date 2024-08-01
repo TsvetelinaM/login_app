@@ -47,11 +47,14 @@ Src:
 ├───utils
 └───validations
 
-In the assets folder are stored all assets needed for the app - like images.
+Assets - stored all assets needed for the app - like images.
 
 Components - reusable small parts, styled using styled-components library.
+
 Pages - the whole pages used for the routing. The components needed for them are stored in the Components folder.
+
 Services:
+
 api-> the mocked data used for the login functionality ('users.json')
 i18n-> configurations for the localization
 snackbar -> configuration for the used notification system
