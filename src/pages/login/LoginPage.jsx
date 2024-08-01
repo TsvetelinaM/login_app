@@ -14,7 +14,7 @@ import { getIsAuthenticated } from 'pages/login/selectors'
 import { homePath, resetPath } from 'services/utils/AppVars'
 import { emailKey, passwordKey } from './constants'
 
-const Login = ({ translations, loginRequest, isAuthenticated }) => {
+const LoginPage = ({ translations, loginRequest, isAuthenticated }) => {
   const [formData, setFormData] = useState({ email: '', password: '' })
   const navigate = useNavigate()
 
@@ -66,7 +66,7 @@ const Login = ({ translations, loginRequest, isAuthenticated }) => {
   )
 }
 
-Login.propTypes = {
+LoginPage.propTypes = {
   translations: PropTypes.object,
   loginRequest: PropTypes.func,
   isAuthenticated: PropTypes.bool,
@@ -78,4 +78,4 @@ const mapStateToProps = (state) => ({
 
 export default connect(mapStateToProps, {
   loginRequest,
-})(Login)
+})(LoginPage)

@@ -1,5 +1,5 @@
 {
-    "entrance": "Entrance",
+    "entrance": "Login",
     "please_enter_your_credentials": "Please enter your credentials",
     "email": "E-mail",
     "password": "password",
@@ -8,6 +8,11 @@
     "reset_password": "Reset password",
     "submit": "Submit",
     "back_login": "Back to login",
-    "not_found": "Page is not found"
-
+    "not_found": "Page is not found",
+    "successful_login":"The authentication was successful",
+    "sent_password":"The new password has been sent",
+    "errorMsgs":{
+      "wrong_credentials": "The email and/or password are not correct!",
+      "try_again":"Please try again"
+    }
   }

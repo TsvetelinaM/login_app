@@ -9,8 +9,7 @@ import {
   SnackbarUtilsConfigurator,
   stylesSnackbar,
 } from 'services/snackbar/snackbar'
-import { BackgroundHolder } from 'components/containers/BackgroundHolder.jsx'
-import LangSwitcher from 'pages/localization/LangSwitcher'
+import MainPage from 'pages/main/MainPage'
 import { setLangAsync } from 'pages/localization/actions'
 import { getSelectedTranslations } from 'pages/localization/selectors'
 
@@ -31,9 +30,9 @@ function App({ setLangAsync, translations }) {
       }}
     >
       <SnackbarUtilsConfigurator />
-      <BackgroundHolder />
-      <LangSwitcher />
-      <AppRoutes translations={translations} />
+      <MainPage translations={translations}>
+        <AppRoutes translations={translations} />
+      </MainPage>
       <GlobalStyle />
     </SnackbarProvider>
   )

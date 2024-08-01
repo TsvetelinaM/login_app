@@ -1,6 +1,5 @@
 import { LOGIN_SUCCESS, LOGIN_FAILURE } from './constants'
 import users from 'services/api/users.json'
-import SnackbarUtils from 'services/snackbar/snackbar.js'
 
 export const loginRequest = (credentials) => (dispatch) => {
   let user = users.find(
@@ -13,9 +12,9 @@ export const loginRequest = (credentials) => (dispatch) => {
       user: user,
     })
   } else {
-    SnackbarUtils.error('Failure')
     dispatch({
       type: LOGIN_FAILURE,
+      msg: 'wrong_credentials',
     })
   }
 }

@@ -7,7 +7,7 @@ import { Header1 } from 'components/headers/Headers'
 import { Centered } from 'components/layout/Layout'
 import { loginPath } from 'services/utils/AppVars'
 
-const NotFound = ({ translations }) => {
+const NotFoundPage = ({ translations }) => {
   return (
     <MainContainer>
       <BackBtn to={loginPath}>{translations.back_login}</BackBtn>
@@ -18,8 +18,8 @@ const NotFound = ({ translations }) => {
   )
 }
 
-NotFound.propTypes = {
+NotFoundPage.propTypes = {
   translations: PropTypes.object,
 }
 
-export default NotFound
+export default NotFoundPage

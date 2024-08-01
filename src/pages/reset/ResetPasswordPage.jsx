@@ -11,7 +11,7 @@ import { resetRequest } from './actions'
 import { loginPath } from 'services/utils/AppVars'
 import { emailKey } from './constants'
 
-const ResetPassword = ({ translations, resetRequest }) => {
+const ResetPasswordPage = ({ translations, resetRequest }) => {
   const [formData, setFormData] = useState({ email: '' })
 
   const handleChange = (event) => {
@@ -45,11 +45,11 @@ const ResetPassword = ({ translations, resetRequest }) => {
   )
 }
 
-ResetPassword.propTypes = {
+ResetPasswordPage.propTypes = {
   translations: PropTypes.object,
   resetRequest: PropTypes.func,
 }
 
 export default connect(null, {
   resetRequest,
-})(ResetPassword)
+})(ResetPasswordPage)
