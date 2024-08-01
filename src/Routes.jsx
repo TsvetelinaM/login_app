@@ -1,14 +1,21 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-import Initial from 'pages/login/Initial'
+import GuardedRoute from 'GuardedRoute.jsx'
+import Login from 'pages/login/Login'
+import ResetPassword from 'pages/reset/ResetPassword'
+import Home from 'pages/home/Home'
+import * as constants from 'services/utils/AppVars'
 
-function AppRoutes() {
-  return (
-    <Routes>
-      <Route path='/' element={<Initial />} />
-    </Routes>
-  )
-}
+const AppRoutes = (props) => (
+  <Routes>
+    <Route path={constants.initialPath} element={<Login {...props} />} />
+    <Route path={constants.loginPath} element={<Login {...props} />} />
+    <Route path={constants.resetPath} element={<ResetPassword {...props} />} />
+    <Route element={<GuardedRoute />}>
+      <Route path={constants.homePath} element={<Home {...props} />} />
+    </Route>
+  </Routes>
+)
 
 export default AppRoutes

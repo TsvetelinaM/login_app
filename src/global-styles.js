@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.4rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    background-color: #eef0f2;
+    background-color: white;
     color: #2F3437;
     overflow: hidden;
     -moz-user-select: none; 

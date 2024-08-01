@@ -2,5 +2,10 @@
     "entrance": "Вход",
     "please_enter_your_credentials": "Моля въведете имейл и парола",
     "email": "Електронна поща",
-    "password": "парола"
+    "password": "парола",
+    "login":"Вписване",
+    "welcome": "Добре дошъл",
+    "reset_password": "Нова парола",
+    "submit": "Изпрати",
+    "back_login": "Назад към логин"
   }

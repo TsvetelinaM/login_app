@@ -1,0 +1,17 @@
+[
+   {
+        "email":"test@gmail.com",
+        "password":"test",
+        "name":"Test Testov"
+    },
+    {
+        "email":"",
+        "password":"",
+        "name":""
+    },
+    {
+        "email":"",
+        "password":"",
+        "name":""
+    }
+]

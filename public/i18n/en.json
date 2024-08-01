@@ -2,5 +2,11 @@
     "entrance": "Entrance",
     "please_enter_your_credentials": "Please enter your credentials",
     "email": "E-mail",
-    "password": "password"
+    "password": "password",
+    "login":"Login",
+    "welcome": "Welcome",
+    "reset_password": "Reset password",
+    "submit": "Submit",
+    "back_login": "Back to login"
+
   }

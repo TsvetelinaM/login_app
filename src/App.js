@@ -1,22 +1,25 @@
 import React, { useEffect } from 'react'
 import { SnackbarProvider } from 'notistack'
-import { useDispatch } from 'react-redux'
+import { PropTypes } from 'prop-types'
+import { connect } from 'react-redux'
 
 import AppRoutes from 'Routes'
 import GlobalStyle from 'global-styles'
-import { SnackbarUtilsConfigurator, stylesSnackbar } from 'services/snackbar'
-import { setLangAsync } from 'services/i18n/i18nSlice'
+import {
+  SnackbarUtilsConfigurator,
+  stylesSnackbar,
+} from 'services/snackbar/snackbar'
+import { BackgroundHolder } from 'components/containers/BackgroundHolder.jsx'
+import LangSwitcher from 'pages/localization/LangSwitcher'
+import { setLangAsync } from 'pages/localization/actions'
+import { getSelectedTranslations } from 'pages/localization/selectors'
 
 const ALERT_TIMEOUT = 5 * 1000 // milliseconds
 
-function App() {
-  const dispatch = useDispatch()
+function App({ setLangAsync, translations }) {
   useEffect(() => {
-    async function setLang() {
-      await dispatch(setLangAsync())
-    }
-    setLang()
-  }, [dispatch])
+    setLangAsync()
+  }, [setLangAsync])
 
   return (
     <SnackbarProvider
@@ -28,10 +31,22 @@ function App() {
       }}
     >
       <SnackbarUtilsConfigurator />
-      <AppRoutes />
+      <BackgroundHolder />
+      <LangSwitcher />
+      <AppRoutes translations={translations} />
       <GlobalStyle />
     </SnackbarProvider>
   )
 }
 
-export default App
+App.propTypes = {
+  translations: PropTypes.object,
+}
+
+const mapStateToProps = (state) => ({
+  translations: getSelectedTranslations(state),
+})
+
+export default connect(mapStateToProps, {
+  setLangAsync,
+})(App)

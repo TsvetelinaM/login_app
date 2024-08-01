@@ -1,7 +1,7 @@
 export const defaultLang = 'en'
 export const supportedLangs = {
-  en: 'English',
-  bg: 'Български',
+  en: 'EN',
+  bg: 'БГ',
 }
 
 export const langUrl = '/i18n/{lang}.json'
